@@ -1,6 +1,11 @@
-const request = new XMLHttpRequest()
-request.open('get', 'http://qq.com:8888/friends.json')
-request.onload = () => {
-  console.log(request.response)
+const rand = 'JSONP_frank.com_' + Math.random()
+window[rand] = (data) => {
+  console.log(data)
 }
-request.send()
+
+const script = document.createElement('script')
+script.src = `http://qq.com:8888/friends.js?callback=${rand}`
+script.onload = () =>{
+  script.remove()
+}
+document.body.append(script)
