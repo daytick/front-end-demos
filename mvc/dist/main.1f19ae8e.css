@@ -1,0 +1,69 @@
+*{margin: 0; padding: 0;}
+*, *::before, *::after{box-sizing: border-box;}
+ol, ul{list-style: none;}
+body > .page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body > .page > section {
+  border: 1px solid red;
+  width: 50vw;
+  height: 50vh;
+}
+#app1{
+  padding-top: 10vw;
+  padding-left: 10vw;
+}
+#app2 .tab-bar {
+  display: flex;
+}
+#app2 .tab-bar > li {
+  border: 1px solid grey;
+  width: 50%;
+}
+#app2 .tab-bar > li.selected {
+  background: orange;
+  color: white;
+}
+#app2 .tab-content > li{
+  display: none;
+}
+#app2 .tab-content > li.active {
+  display: block;
+}
+
+#app3 .square {
+  border: 1px solid black;
+  margin-top: 10vw;
+  margin-left: 10vw;
+  width: 8vw;
+  height: 8vw;
+  transition: transform 1s linear;
+}
+#app3 .square.active {
+  transform: translateX(20vw);
+}
+#app4 .circle {
+  border: 1px solid black;
+  margin-top: 10vw;
+  margin-left: 10vw;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+}
+
+@keyframes changeColor {
+  0%{
+    background: green;
+  }
+  100%{
+    background: red;
+  }
+}
+
+#app4 .circle.active {
+  animation: changeColor 2s linear infinite alternate;
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
