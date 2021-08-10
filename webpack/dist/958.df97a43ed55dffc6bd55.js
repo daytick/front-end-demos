@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[958],{958:(e,s,u)=>{function c(){console.log("我是一个懒加载模块。")}u.r(s),u.d(s,{default:()=>c})}}]);
